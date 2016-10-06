@@ -1,6 +1,8 @@
 package co.levee.cs2.creator;
 
 import co.levee.cs2.Homework4.DaysInMonth;
+import co.levee.cs2.Homework5.CalcArea;
+import co.levee.cs2.Homework5.TotalArea;
 import co.levee.cs2.uml.Engine;
 import com.google.gson.Gson;
 
@@ -12,7 +14,7 @@ public class Creator {
     Gson gson = new Gson();
 
     public void test() throws Exception {
-        System.out.println(gson.toJson(new Problem(engine, "problem 4", DaysInMonth.class)));
+        System.out.println(gson.toJson(new Problem(engine, "problem 4", CalcArea.class, TotalArea.class)));
     }
 
     public static void main(String[] args) throws Exception {
