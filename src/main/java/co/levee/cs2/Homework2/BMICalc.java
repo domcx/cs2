@@ -1,5 +1,6 @@
 package co.levee.cs2.Homework2;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 /**
@@ -27,11 +28,8 @@ public class BMICalc {
      * @param args Unused
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.printf("Please input your weight in pounds (lb): ");
-        int weight = Math.abs(sc.nextInt());
-        System.out.printf("Please input your height in inches (in): ");
-        int height = Math.abs(sc.nextInt());
+        int weight = Integer.valueOf(JOptionPane.showInputDialog(null, "Please input your weight in pounds (lb)"));
+        int height = Integer.valueOf(JOptionPane.showInputDialog(null, "Please input your height in inches (in)"));
         System.out.printf("Your weight is %s pounds and your height is %s inches.\n", weight, height);
         System.out.printf("Your BMI is: %.2f\n", calc(weight, height));
         System.out.printf("%s", BMI_STANDARD);
